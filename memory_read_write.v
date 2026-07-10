@@ -1,4 +1,4 @@
-module single_port_ram(input rst,clk,wr,sel,input [15:0]wdata, output [15:0]rdata);
+module wr_mem (input rst,clk,wr,sel,input [15:0]wdata, output [15:0]rdata);
 reg [15:0] register;
 always @(posedge clk) begin
     if(rst)
