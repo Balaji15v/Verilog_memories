@@ -2,7 +2,7 @@ module tb;
 reg clk,rst,wr,sel;
 reg [15:0]wdata;
 wire [15:0]rdata;
-example dut (.clk(clk),.rst(rst),.wr(wr),.sel(sel),.wdata(wdata),.rdata(rdata));
+single_port_ram dut (.clk(clk),.rst(rst),.wr(wr),.sel(sel),.wdata(wdata),.rdata(rdata));
 always #5 clk=~clk;
 initial begin
     $monitor($time, "wr =%b rst=%b sel=%b wdata=%b rdata=%b",wr,rst,sel,wdata,rdata);
